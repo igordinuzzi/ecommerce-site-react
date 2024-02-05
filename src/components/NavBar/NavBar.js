@@ -31,7 +31,7 @@ function NavBar({ cartItems, onRemoveItem }) {
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>
-            <img src="/images/logo/logo.png" alt="Your Logo" />
+            <img src={`${process.env.PUBLIC_URL}/images/logo/logo.png`} alt="Your Logo" />
           </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -8,7 +8,7 @@ const PaymentOptionsImages = () => {
       {/* Wrap Image with an <a> tag for PayPal */}
       <a href="https://www.paypal.com/signin" target="_blank" rel="noopener noreferrer">
         <Image 
-          src="/images/payment/paypal.png" 
+          src={`${process.env.PUBLIC_URL}/images/payment/paypal.png`} 
           alt="PayPal" 
           rounded 
           className="payment-option-image"
@@ -18,7 +18,7 @@ const PaymentOptionsImages = () => {
       {/* Wrap Image with an <a> tag for Stripe */}
       <a href="https://dashboard.stripe.com/login" target="_blank" rel="noopener noreferrer">
         <Image 
-          src="/images/payment/stripe.png" 
+          src={`${process.env.PUBLIC_URL}/images/payment/stripe.png`}
           alt="Stripe" 
           rounded 
           className="payment-option-image"
@@ -28,7 +28,7 @@ const PaymentOptionsImages = () => {
         {/* Wrap Image with an <a> tag for Tikki */}
             <a href="https://www.abnamro.nl/en/personal/internet-and-mobile/apps/Tikkie/index.html" target="_blank" rel="noopener noreferrer">
         <Image 
-          src="/images/payment/tikki.png" 
+          src={`${process.env.PUBLIC_URL}/images/payment/tikki.png`} 
           alt="Tikki" 
           rounded 
           className="payment-option-image"
@@ -38,7 +38,7 @@ const PaymentOptionsImages = () => {
       {/* Wrap Image with an <a> tag for Payoneer */}
               <a href="https://login.payoneer.com/" target="_blank" rel="noopener noreferrer">
         <Image 
-          src="/images/payment/payoneer.png" 
+          src={`${process.env.PUBLIC_URL}/images/payment/payoneer.png`} 
           alt="Payoneer" 
           rounded 
           className="payment-option-image"

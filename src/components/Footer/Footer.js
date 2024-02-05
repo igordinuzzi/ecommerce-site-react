@@ -12,7 +12,7 @@ function Footer() {
         <Row>
           <Col sm={12} md={6} lg={3}>
             <div className="footer-logo">
-              <img src="images/logo/logo-dark.png" alt="Logo" className="img-fluid" />
+              <img src={`${process.env.PUBLIC_URL}/images/logo/logo-dark.png`} alt="Logo" className="img-fluid" />
               <p>Ride the Dutch Way: Quality Second-Hand Bikes for Everyone</p>
             </div>
           </Col>
@@ -45,10 +45,10 @@ function Footer() {
               <div className="app-icons">
                 {/* Replace 'google-play-link' and 'apple-store-link' with actual app store links */}
                 <a href="https://play.google.com/store/games?hl=en&gl=US" target="_blank" rel="noopener noreferrer">
-                  <img src="images/stores/google-play.png" alt="Google Play" className="img-fluid" />
+                  <img src={`${process.env.PUBLIC_URL}/images/stores/google-play.png`} alt="Google Play" className="img-fluid" />
                 </a>
                 <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-                  <img src="images/stores/apple-store.png" alt="Apple Store" className="img-fluid" />
+                  <img src={`${process.env.PUBLIC_URL}/images/stores/apple-store.png`} alt="Apple Store" className="img-fluid" />
                 </a>
               </div>
             </div>

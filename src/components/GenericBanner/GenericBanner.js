@@ -16,7 +16,7 @@ function GenericBanner() {
               <Button className="primary-button" id="banner-button">Get Started</Button>
             </Link>
           </div>
-          <img src="images/banner/banner-image.png" alt="Left Banner" className="image-banner" />
+          <img src={`${process.env.PUBLIC_URL}/images/banner/banner-image.png`} alt="Left Banner" className="image-banner" />
         </Col>
         <Col md={6} className="banner-content right-banner">
           <div className="banner-text">
@@ -24,14 +24,14 @@ function GenericBanner() {
             <p>Get our app for the best shopping experience!</p>
             <div className="app-buttons">
               <a href="https://play.google.com/store/games?hl=en&gl=US" target="_blank" rel="noopener noreferrer">
-                <img src="images/stores/google-play.png" alt="Google Play" className="app-button-image" />
+                <img src={`${process.env.PUBLIC_URL}/images/stores/google-play.png`} alt="Google Play" className="app-button-image" />
               </a>
               <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-                <img src="images/stores/apple-store.png" alt="Apple Store" className="app-button-image" />
+                <img src={`${process.env.PUBLIC_URL}/images/stores/apple-store.png`} alt="Apple Store" className="app-button-image" />
               </a>
             </div>
           </div>
-          <img src="images/app/app.png" alt="Right Banner" className="image-banner"/>
+          <img src={`${process.env.PUBLIC_URL}/images/app/app.png`} alt="Right Banner" className="image-banner"/>
         </Col>
       </Row>
     </Container>

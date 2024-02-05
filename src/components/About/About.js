@@ -14,7 +14,7 @@ function About() {
 
             {/* New Section: Visual Elements */}
             <div className="visual-elements">
-        <img src="images/about/about-office.jpg" alt="Fietsen office" className="responsive-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/about/about-office.jpg`} alt="Fietsen office" className="responsive-image" />
       </div>
 
       <h2>Why Dutch Bikes?</h2>
@@ -44,7 +44,7 @@ function About() {
 
       {/* New Section: Visual Elements */}
       <div className="visual-elements">
-        <img src="images/about/about-dutch.jpg" alt="Dutch Bike" className="responsive-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/about/about-dutch.jpg`} alt="Dutch Bike" className="responsive-image" />
       </div>
 
 {/* Customer Testimonials Section */}
@@ -54,7 +54,7 @@ function About() {
             <Col md={6} className="text-center">
               <img
                 className="testimonial-image d-block"
-                src="/images/about/testimonial-1.png"
+                src={`${process.env.PUBLIC_URL}/images/about/testimonial-1.png`}
                 alt="First testimonial"
               />
               <blockquote className="testimonial-text">"I love my new Dutch bike from Fitsen! Great quality and service."</blockquote>
@@ -67,7 +67,7 @@ function About() {
             <Col md={6} className="text-center">
               <img
                 className="testimonial-image d-block"
-                src="/images/about/testimonial-2.png" 
+                src={`${process.env.PUBLIC_URL}/images/about/testimonial-2.png`}
                 alt="Second testimonial"
               />
               <blockquote className="testimonial-text">"Fitsen made it easy to find the perfect bike for my city commutes."</blockquote>
@@ -82,7 +82,7 @@ function About() {
       <Row className="news-container my-4">
   <Col md={4} className="news-item mb-4">
     <Card>
-      <Card.Img variant="top" src="images/news/expanding-our-collection.jpg" alt="Expanding Our Collection" />
+      <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/images/news/expanding-our-collection.jpg`} alt="Expanding Our Collection" />
       <Card.Body>
         <Card.Title>Expanding Our Collection</Card.Title>
         <Card.Text>Fietsen now offers an even wider range of vintage Dutch bikes, curated to suit all your cycling needs.</Card.Text>
@@ -92,7 +92,7 @@ function About() {
 
   <Col md={4} className="news-item mb-4">
     <Card>
-      <Card.Img variant="top" src="images/news/sustainability-initiative.jpg" alt="Sustainability Initiative" />
+      <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/images/news/sustainability-initiative.jpg`} alt="Sustainability Initiative" />
       <Card.Body>
         <Card.Title>Sustainability Initiative</Card.Title>
         <Card.Text>We're committed to eco-friendly practices. Learn how Fietsen is making a difference in sustainable transportation.</Card.Text>
@@ -102,7 +102,7 @@ function About() {
 
   <Col md={4} className="news-item mb-4">
     <Card>
-      <Card.Img variant="top" src="images/news/customer-stories.jpg" alt="Customer Stories" />
+      <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/images/news/customer-stories.jpg`} alt="Customer Stories" />
       <Card.Body>
         <Card.Title>Customer Stories</Card.Title>
         <Card.Text>Discover how our customers are enjoying their Dutch bikes and read their inspiring cycling journeys.</Card.Text>

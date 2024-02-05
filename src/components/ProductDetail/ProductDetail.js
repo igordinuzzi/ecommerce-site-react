@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { products } from '../ProductList/ProductList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMapMarkerAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
-
+import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function ProductDetail({ addToCart }) {
   const { id } = useParams();
@@ -14,11 +14,15 @@ function ProductDetail({ addToCart }) {
     return <div className="alert alert-danger">Product not found</div>;
   }
 
+// URL encoding for sharing the product name and URL
+const shareUrl = encodeURIComponent(window.location.href);
+const shareText = encodeURIComponent(`Check out this product: ${product.name}`);
+  
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-6">
-          <img src={product.image} alt={product.name} className="img-fluid rounded" />
+          <img src={`${process.env.PUBLIC_URL}${product.image}`} alt={product.name} className="img-fluid rounded" />
         </div>
         <div className="col-md-6">
           <h2 className="mb-3">{product.name}</h2>
@@ -38,6 +42,16 @@ function ProductDetail({ addToCart }) {
           <button onClick={() => addToCart(product)} className="primary-button">
             Add to Cart
           </button>
+           {/* Share buttons */}
+           <div className="social-share mt-4">
+            <span className="mr-2">SHARE:</span>
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&t=${shareText}`} target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`} target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </div>
         </div>
       </div>
       {/* Additional Content */}

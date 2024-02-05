@@ -6,7 +6,7 @@ import { faUser, faMapMarkerAlt, faHeart } from '@fortawesome/free-solid-svg-ico
 function Product({ product, addToCart }) {
   return (
     <div className="product">
-      <img src={product.image} alt={product.name} />
+      <img src={`${process.env.PUBLIC_URL}${product.image}`} alt={product.name} />
       <h3>{product.name}</h3>
       <p>{product.description}</p>
       <p><FontAwesomeIcon icon={faUser} className="icon-color" /> Seller: {product.seller}</p>

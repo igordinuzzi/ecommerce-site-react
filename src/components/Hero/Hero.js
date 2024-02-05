@@ -18,7 +18,7 @@ const Hero = ({ scrollToProductList }) => {
             </div>
           </Col>
           <Col md={6} className="hero-image-column">
-            <img src="/images/hero/promo-image.png" alt="Promotional Product" className="promo-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/hero/promo-image.png`} alt="Promotional Product" className="promo-image" />
           </Col>
         </Row>
       </Container>
