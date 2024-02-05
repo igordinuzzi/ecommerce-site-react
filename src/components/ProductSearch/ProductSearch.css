@@ -12,7 +12,7 @@
 .product-search input {
   padding: 10px;
   width: 100%; /* Make input width responsive */
-  max-width: 600px; /* Maximum width */
+  max-width: 6e00px; /* Maximum width */
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
@@ -83,7 +83,7 @@
   }
 
   .product-search input {
-    max-width: 400px;
+    max-width: 300px;
     padding: 10px; /* Adjust padding */
     font-size: 14px; /* Smaller font size */
     margin-bottom: 10px; /* Add space between elements */

@@ -7,6 +7,7 @@
   color: var(--primary-color);
 }
 
+
 .about-page h2 {
   color: var(--primary-color);
   margin-top: 2rem; /* Space above the section header */
@@ -121,22 +122,41 @@
 
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
 @media (max-width: 768px) {
-  .about-page-container {
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
+/* Adjust padding for smaller screens in the .about-page-container */
+.about-page-container {
+  padding: 20px;
+}
+
+/* Center the .about-page and adjust padding for smaller screens */
+.about-page {
+  margin: 0 auto;
+  max-width: 768px; /* Adjust the maximum width as needed */
+  padding: 20px; /* You can adjust the padding value as needed for smaller screens */
+}
+
+.about-page h1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
   .about-page h2 {
     margin-top: 1rem; /* Adjust space above section header for mobile */
     margin-bottom: 0.5rem; /* Adjust space below section header for mobile */
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .about-page p {
     margin-bottom: 0.5rem; /* Adjust bottom margin for paragraphs on mobile */
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .values-section {
     margin-top: 1rem; /* Adjust space above the row for mobile */
     margin-bottom: 1rem; /* Adjust space below the row for mobile */
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .value .icon {
