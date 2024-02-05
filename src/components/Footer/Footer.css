@@ -18,14 +18,12 @@
 
 .footer-navigation li {
   margin-bottom: 10px;
-}
-
-.footer-navigation a {
   text-decoration: none;
   color: var(--text-color);
+  cursor: pointer;
 }
 
-.footer-navigation a:hover {
+.footer-navigation li:hover {
   text-decoration: none;
   color: var(--background-light);
 }

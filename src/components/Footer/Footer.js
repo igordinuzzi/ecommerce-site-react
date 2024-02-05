@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <footer className="footer-container text-light">
       <Container>
@@ -19,13 +22,13 @@ function Footer() {
           <Col sm={12} md={6} lg={3}>
             <div className="footer-navigation">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/SellBikeForm">Sell Your Bike</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/faqs">FAQs</a></li>
-                <li><a href="/contact">Contact</a></li>
-              </ul>
+                <li onClick={() => navigate('/')}>Home</li>
+                <li onClick={() => navigate('/products')}>Products</li>
+                <li onClick={() => navigate('/SellBikeForm')}>Sell Your Bike</li>
+                <li onClick={() => navigate('/about')}>About</li>
+                <li onClick={() => navigate('/faqs')}>FAQs</li>
+                <li onClick={() => navigate('/contact')}>Contact</li>
+            </ul>
             </div>
           </Col>
           <Col sm={12} md={6} lg={3}>
