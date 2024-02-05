@@ -1,52 +1,31 @@
 # Fietsen, ecommerce in React
 
 ## Table of Contents
-1. [Introduction](#oishi-izayaka)
-2. [What's in Store](#whats-in-store)
-3. [Features](#features)
-4. [Existing Features and Features to Implement](#existing-features-and-features-to-implement)
-5. [Technologies](#technologies)
-6. [User Stories](#user-stories)
-7. [User Flow](#user-flow)
-   - [Task Flow for Booking a Table](#task-flow-for-booking-a-table)
-8. [Wireframes](#wireframes)
-9. [Code Snippets](#code-snippets)
-10. [Testing](#testing)
-11. [Deployment](#deployment)
-12. [Credits](#credits)
+1. [Features](#features)
+2. [Existing Features and Features to Implement](#existing-features-and-features-to-implement)
+3. [Technologies](#technologies)
+4. [User Stories](#user-stories)
+5. [User Flow](#user-flow)
+6. [Wireframes](#wireframes)
+7. [Testing](#testing)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
 
+![Mockup](doc/mockup.png)
 
-This React-based platform emerges as a distinctive Dutch bike second-hand ecommerce site, skillfully merging product exploration, in-depth insights, and streamlined shopping within a 
-richly functional and aesthetically pleasing digital environment. It leads users with a dynamic navigation bar and an inviting Hero section through a 
-carefully selected assortment of Dutch bicycles and related accessories. The incorporation of an intuitive Product Search and detailed Product Pages simplifies 
-the journey toward discovering and acquiring pre-loved cycling gems. Enhanced by a comprehensive FAQ section, an engaging About page, and a direct Contact form, 
-the platform offers a narrative and a bridge to its community. The Sell Bike Form specifically invites users to become active contributors to this cycling marketplace. 
-Further enriched by a Generic Banner for announcements and a strategically placed Footer for navigation, the site prioritizes transparency and user trust through its Cookie Consent feature. 
-This platform isn't just an ecommerce site; it's a vibrant community hub dedicated to Dutch cycling culture, where every interaction signifies a pedal stroke towards a more connected cycling community.
+This React-based platform stands out as a unique second-hand Dutch bike ecommerce site, combining easy product discovery, detailed insights, and smooth shopping in an appealing and functional online environment. It guides users with a dynamic navigation bar and a welcoming Hero section to a select range of Dutch bikes and accessories. The site makes finding and buying pre-owned bicycles straightforward with an intuitive Product Search and detailed Product Pages, supported by a comprehensive FAQ, an engaging About page, and a direct Contact form. It invites users to engage by selling their bikes, and features a Generic Banner for news and a Footer for easy navigation, emphasizing transparency and trust with a Cookie Consent feature. Beyond being a shopping site, it's a community hub for Dutch cycling enthusiasts, promoting a more connected cycling community with every interaction.
 
- ![Mockup](doc/mockup.png)
-
-## What's in Store:
-
-- Inventory: Dive into our extensive collection of pre-loved Dutch bikes and cycling accessories. From classic city bikes to rugged touring models, our inventory caters to every cyclist's needs. Discover high-quality, second-hand gems and find the perfect ride to match your lifestyle and preferences.
-
-- Heritage: Every bike tells a story. Explore the rich history behind our Dutch bike second-hand ecommerce platform, our dedication to sustainability, and the cycling culture that drives us forward. Delve into the stories of previous owners, the craftsmanship of Dutch bicycles, and the values that underpin our community-focused mission.
-
-- Purchase & Sell: Begin your next cycling chapter with us. Whether you're looking to purchase a piece of Dutch cycling heritage or sell your own bike, our platform makes the process straightforward and secure. Use our online system to find your next bicycle or to give your old bike a new home, fostering a cycle of continuous passion and care within the cycling community.
-
-Step onto our digital platform for an unparalleled journey into the world of Dutch cycling. We're excited to connect you with the bikes, stories, and community that make Dutch cycling not just a mode of transportation, but a way of life. Welcome to our cycling community, where every transaction is a pedal stroke towards a more sustainable and connected world.
-
-Live webpage [here](https://igordinuzzi.github.io/oishizakaya/)
+Live webpage [here](https://igordinuzzi.github.io/ecommerce-site-react/)
 
 ## Features
 
 - Navigation:
-Adaptive navigation with comprehensive links ensures seamless browsing on every device. Essential to crafting an intuitive online environment, this React component facilitates smooth exploration through the site's diverse sections, thereby enhancing user engagement and satisfaction. Through meticulously structured navigation, implemented via React Router and Bootstrap for responsive behavior, users can effortlessly locate desired information, products, or services. This not only amplifies usability but also strengthens user retention by offering an accessible and navigable interface. The NavBar component, enriched with dynamic cart animations and straightforward access to cart management, embodies a pivotal touchpoint in the user journey, reinforcing the seamless blend of functionality and aesthetic appeal. Incorporating icons from FontAwesome for visual cues and utilizing a collapsible design, it ensures that navigation remains fluid and user-focused across all viewing platforms.
+This React component features adaptive navigation with comprehensive links for smooth browsing across devices, enhancing user engagement and satisfaction. Using React Router and Bootstrap, it offers meticulously structured navigation for easy location of information, products, or services, improving usability and user retention. The NavBar component, with dynamic cart animations and easy cart access, serves as a key user touchpoint, combining functionality and aesthetics. It uses FontAwesome icons and a collapsible design to keep navigation user-friendly and fluid on all platforms.
  ![Navigation](doc/features/nav-desktop.jpg)
  ![Navigation mobile](doc/features/nav-mobile.jpg)
   
 - Footer: 
-Anchoring the site, the footer integrates social media connectivity, app store accessibility, and intuitive navigation. It prominently displays icons for Facebook, Twitter, and Instagram, seamlessly connecting users to the platform's vibrant social community for updates and engagement. The footer also houses a concise navigation menu, guiding visitors through key site pages such as Home, Products, Sell Your Bike, About, FAQs, and Contact, thereby enhancing the user experience. Essential for those interested in deeper engagement, an email link fosters direct communication. Additionally, it features a visually appealing section with links to download the platform's application from Google Play and the Apple App Store, inviting users to access the site's offerings on-the-go. This React component, styled with custom CSS and leveraging FontAwesome icons for visual appeal, not only solidifies the site's brand presence but also underscores its commitment to accessibility, community engagement, and user convenience.
+The site's footer enhances user experience by offering social media links to Facebook, Twitter, and Instagram for community engagement, a clear navigation menu for easy access to essential pages like Home and Contact, and an email link for direct communication. It also promotes the site's mobile app with links to Google Play and the Apple App Store for on-the-go access. Styled with custom CSS and FontAwesome icons, this React component strengthens the brand's presence and commitment to accessibility and convenience.
   ![Footer](doc/features/footer-desktop.jpg)
   ![Footer mobile](doc/features/footer-mobile.jpg)
 
@@ -56,113 +35,301 @@ enhancing brand visibility and user recognition, and it helps users quickly loca
   ![Favicon](doc/features/favicon.png)
   
 - Landing page 
-The interface of this React application is architecturally designed to streamline user navigation, featuring a fluid layout that intuitively guides users through its comprehensive functionalities. Upon entering, users are welcomed by a Hero component that sets the tone for their journey, further complemented by a NavBar for easy access to various sections including Products, About, FAQs, and more. The core of the application revolves around the ProductList, where users can browse through an array of second-hand Dutch bikes and accessories, enriched by a ProductSearch component to refine their exploration. Detailed views provided by the ProductDetail component enhance user engagement by offering in-depth information about each item, including the option to add products to a virtual cart.
-
-Interactivity is heightened through real-time feedback mechanisms, such as notifications for added or removed cart items, and a Cart page that summarizes the user's potential purchases. The SellBikeForm introduces an interactive platform for users to contribute to the cycling community by listing their own bikes for sale. Additionally, the application encompasses informative sections like About, FAQ, and Contact, offering insights into the platform's mission and operations. A GenericBanner serves to highlight special announcements or deals, further engaging the audience.
-
-The application's layout ensures that essential features are within easy reach, facilitated by smooth scrolling functions and responsive design principles, ensuring compatibility across all devices. The Footer component anchors the experience with social media links, app store downloads, and a concise navigation menu, encapsulating the essence of the platform's brand and community ethos. Through thoughtful integration of components like CookieConsent, the application emphasizes user privacy and compliance, rounding off a holistic user experience designed to cater to the needs of Dutch bike enthusiasts and casual browsers alike.
+This React application offers streamlined navigation with a fluid layout, guiding users from a welcoming Hero component to various sections like Products and About via a NavBar. It features a ProductList for browsing second-hand Dutch bikes and accessories, enhanced by a ProductSearch for refined exploration. Detailed product information is available through the ProductDetail component, including add-to-cart options. The interface promotes interactivity with notifications for cart updates and a Cart page summarizing purchases. Users can list their bikes for sale with the SellBikeForm, contributing to the cycling community. Informative sections provide insights into the platform's mission, with a GenericBanner for special announcements. The design is responsive across devices, with a Footer that offers social media links, app store downloads, and navigation, emphasizing the brand and community ethos. CookieConsent integration ensures user privacy, creating a comprehensive experience for Dutch bike enthusiasts.
     ![Welcome Page](doc/features/index-desktop.jpg)
     ![Welcome Page](doc/features/index-mobile.jpg)
 
+- About page
 
+The `About` component in this React application presents Fitsen, a platform for Dutch bicycles, highlighting its mission, values, and offerings. Key features include:
+
+Introduction: Introduces Fitsen and its mission for a sustainable, quality-driven cycling community.
+Visuals: Incorporates responsive images of the Fitsen office and Dutch bikes.
+Values Section: Displays core values (sustainability, quality, community) with FontAwesome icons.
+History: Briefly outlines Fitsen's origins and development.
+Testimonials Carousel: Features customer testimonials to build trust.
+News Section: Showcases updates and stories in a card layout.
+Contact Info: Encourages user engagement with contact details.
+
+Styled with custom CSS and using React Bootstrap for responsive layout, plus FontAwesome icons for visual enhancement, this component effectively conveys Fitsen's ethos and invites user interaction.
+
+- Cart
+
+The `Cart` component in this React application manages the checkout process for a shopping cart, including form validation and stepwise navigation. It uses `useState` for managing form data, errors, and the current step in the checkout process, and `useEffect` to calculate the total price based on cart items, taxes, and shipping costs. The component features:
+
+Cart Item Listing: Dynamically lists items in the cart with prices.
+Form Validation: Validates form fields with regular expressions and updates state based on user input.
+Stepwise Navigation: Allows users to navigate through the checkout process in steps, with validation checks at each step.
+Form Submission: Handles form submission with validation check, showing an alert if the form is not valid.
+Visual Feedback: Uses FontAwesome icons to provide visual feedback on field validation.
+Dynamic Form Rendering: Renders form fields based on the current step, including a custom component for payment options in the final step.
+
+The component is styled with `Cart.css` and uses Bootstrap for layout and components like `Container`, `Form`, `Button`, `Alert`, and `ListGroup`. It also includes a `PaymentOptionsImages` component to display payment options during the final step of the checkout process.
+
+- Contact
+
+The `Contact` component in this React application provides a user-friendly form for visitors to submit their contact information and messages. It utilizes `useState` to manage form data, sending status, and error messages. The form includes fields for the user's name, email, and a message, with basic validation to ensure no fields are left empty. Upon submission, it displays either a sending status or an error message based on input validation. The form is styled with a custom CSS file (`Contact.css`) and uses React Bootstrap components like `Container`, `Form`, `Button`, and `Alert` for layout and styling. The submission logic, intended for integration with Netlify's form handling, can be easily adapted for other backends or form processing solutions.
+
+- Cookies
+
+The `CookieConsent` component in this React application displays a modal window to inform users about the use of cookies on the website. It utilizes `useState` to control the visibility of the modal and `useEffect` to determine whether the user has previously given consent for cookies, leveraging `localStorage` to store this consent status. If the user has not given consent (`cookieConsent` not set to 'true' in `localStorage`), the modal is shown. The modal includes a message about cookie usage and an "I Agree" button. Clicking this button hides the modal and records the user's consent by setting `cookieConsent` to 'true' in `localStorage`. The component is styled with a custom CSS file (`CookieConsent.css`) and uses React Bootstrap components `Modal` and `Button` for the modal dialog and consent button, respectively.
+
+- FAQs
+
+The `FAQ` component provides an interactive Frequently Asked Questions section using React Bootstrap, featuring a dynamic list of questions and answers from an array (`faqData`). It includes a search function that filters FAQs based on user input, displayed in an accordion format for easy navigation. The component is responsive, ensuring compatibility across devices, and styled with a custom CSS file (`FAQ.css`). This setup enhances user experience by offering quick access to common queries and supporting efficient information retrieval within the application.
+
+- Generic Banner
+
+The `GenericBanner` component is a versatile and visually engaging part of a React application, designed to promote key actions or features within the site. It is structured using React Bootstrap components for a responsive layout and styled with a custom CSS file (`GenericBanner.css`). The component features two main sections within a fluid container for full-width display:
+
+- **Left Banner**: This section encourages users to start selling their bikes by listing them on the platform. It includes compelling text ("Start Selling Your Bike Now"), a brief prompt ("Get ready to list your bike and find buyers!"), and a call-to-action button ("Get Started") that links to the `SellBikeForm` page using a `Link` component from `react-router-dom`. An image related to selling bikes enhances the visual appeal.
+
+- **Right Banner**: Aimed at promoting the platform's mobile application, this section contains text inviting users to download the app for a better shopping experience, along with buttons linking to the Google Play Store and Apple App Store. These links are external and open in a new tab, ensuring the user's experience on the site is not interrupted. An app-related image complements the text.
+
+Each section utilizes a `Row` and `Col` structure to ensure content is displayed optimally across different screen sizes. The use of external links for app downloads and internal routing for the platform's form page demonstrates a blend of navigation strategies to engage users effectively. This component is a strategic tool for driving user action, whether it's listing bikes for sale or downloading the app, and enhances the user experience with its informative and interactive design.
+
+- Hero
+
+The `Hero` component is a visually striking section at the top of a web page, designed to capture the visitor's attention immediately upon arrival. It's built using React and styled with a dedicated CSS file (`Hero.css`), incorporating React Bootstrap components for a responsive layout. The component features a two-column layout within a `Container`: 
+
+- The left column (`Col`) contains the textual content, including a main title (`h1`) that introduces "Fietsen" as a destination for bike enthusiasts, and a subtitle (`h2`) that highlights the platform as a hub for buying, selling, and exploring bikes. A `Button` is included to engage users, encouraging them to start their cycling adventure by scrolling to the product list section of the site.
   
+- The right column (`Col`) displays a promotional image, representing the theme of cycling adventure, making the Hero section visually appealing and balanced between text and imagery.
+
+This setup ensures the Hero section effectively communicates the site's core message and entices users to engage further by exploring the products offered, serving as both an introduction and a call to action.
+
+- Product Detail page
+
+The `ProductDetail` component is designed to display detailed information about a specific product selected by the user. Built with React and styled with a custom CSS file (`ProductDetail.css`), it uses `useParams` from `react-router-dom` to retrieve the product's ID from the URL and finds the corresponding product from a predefined list (`products`).
+
+Features of the component include:
+
+Product Image and Information: Displays the product's image on the left half of the screen and detailed information such as the product name, description, seller, location, condition, and price on the right half.
+Add to Cart Button: Includes a button that, when clicked, adds the product to the user's shopping cart through the `addToCart` function passed as a prop.
+Social Share Icons: Offers social share buttons for Facebook and Twitter, allowing users to share the product with encoded URLs and text, enhancing the product's visibility and user engagement.
+Iconography**: Utilizes `FontAwesomeIcon` for visual representation of the seller, location, and condition, adding aesthetic appeal and making the information more user-friendly.
+Additional Content**: Further down, the component outlines key features of the product and showcases customer reviews, providing potential buyers with more reasons to consider the product.
+
+The structure is responsive, ensuring that the content adjusts nicely to different screen sizes, and the layout is divided into sections for easy navigation and readability. This component effectively combines product details, sharing capabilities, and user reviews, creating a comprehensive and engaging product page experience.
+
+- Product list
+
+The `ProductList` component is designed to dynamically display a catalog of products, particularly focusing on bikes with detailed attributes such as name, description, seller, location, condition, price, and an image. This React component is part of a larger application and offers several key functionalities:
+
+Dynamic Product Loading: Initially, it shows a set number of products (16) and includes functionality to load more products or revert to the initial view. This is managed through state, using `useState` to track the number of visible products and functions to adjust this number.
+Search Functionality: It integrates search functionality by filtering the displayed products based on a search term passed as a prop. This allows users to quickly find products that match their specific search criteria.
+Responsive Layout: Utilizes Bootstrap's grid system to display products in a responsive layout, adjusting the number of columns based on the screen size (4 products per row on medium and larger screens).
+Product Component: Each product is rendered using a `Product` child component, which likely abstracts the details of how a single product is displayed, including its image, description, and an "Add to Cart" action.
+Interactivity: Includes buttons to "Load More" products or "Hide" them, enhancing user interaction by allowing users to control how many products they want to view at a time.
+
+This component is styled with a dedicated CSS file (`Product.css`) and leverages React's component-based architecture to modularly display products, making it a versatile and user-friendly part of an e-commerce or marketplace platform.
+
+- Product
+
+The `Product` component displays information about a single product, intended for use within an e-commerce platform or product listing page. It utilizes React and FontAwesome icons to create a visually appealing presentation of each product's details. Key features of the component include:
+
+Product Image: Displays the product's image, with the `src` path dynamically generated using the `product.image` property.
+Product Details: Shows the product's name, description, seller, location, and condition, enhancing the listing with FontAwesome icons (`faUser`, `faMapMarkerAlt`, `faHeart`) to visually represent these details.
+Price: Lists the product's price, formatted as a currency.
+Add to Cart Button: Includes a button that, when clicked, triggers the `addToCart` function passed as a prop, allowing users to add the product to their shopping cart.
+See More Link: Provides a `Link` to a detailed page for the product, using `react-router-dom` to enable SPA (Single Page Application) navigation without reloading the page. The URL is dynamically generated based on the `product.id`, facilitating access to more detailed information about the product.
+
+This component is designed to be reusable, making it easy to list multiple products by mapping over an array of product objects and rendering a `Product` component for each one. It effectively encapsulates product information in a clear, concise format, encouraging user interaction through its "Add to Cart" and "See More" functionalities.
+
+- Search
+
+The `ProductSearch` component provides a user-friendly search interface, enabling users to filter through products based on their search terms. It employs React state management to handle the input value and dynamically update the search results through the `onSearch` callback function. Key features include:
+
+Search Input: A text input field where users can type their search query, styled with CSS for visual appeal.
+Dynamic Search: As the user types, the `onSearch` function is triggered, updating the search results in real-time based on the input value.
+Clear Search: Includes a button with a FontAwesome `faTimes` icon to quickly clear the search field and reset the search results.
+Search Icon: A magnifying glass icon (`faSearch`) visually indicates the search functionality.
+Feedback on Results: Displays a message below the input field, indicating the number of products found based on the search term. This message dynamically adjusts to reflect singular or plural products based on the `productsCount`.
+
+This component enhances user experience by allowing for easy navigation and filtering of products, making it an essential feature for e-commerce platforms or any application with a searchable product catalog.
+
+- Sell bike form
+
+The `SellBikeForm` component is a multi-step form designed for users to list their bikes for sale. It's built with React and styled using React Bootstrap and FontAwesome icons for a visually appealing interface. Key features include:
+
+State Management: Utilizes `useState` for tracking form data, validation errors, touched fields, progress through the form, and completion status.
+Form Validation: Implements custom validation logic for each field, with specific rules for numeric, email, and text inputs, and displays error messages accordingly.
+Multi-Step Navigation: Divides the form into distinct steps (Bike Details, Bike Description, Seller or User Info), allowing users to progress through the form or go back to previous steps. The current step is tracked with `useState`, and validation must pass before moving to the next step.
+Progress Indicator: A `ProgressBar` component visually represents the user's progress through the form steps.
+Conditional Rendering: Displays form fields based on the current step and shows a success message upon form completion. Error messages are shown if validation fails.
+Form Submission: On submission, if all fields are valid, it simulates form submission and sets the form as completed, displaying a success alert.
+
+Icons from FontAwesome are used to enhance the user interface, indicating the type of information required for each field. The form provides a user-friendly way to list bikes for sale, ensuring all necessary information is collected and validated.
 
 ## Existing Features and Features to Implement
 
 **Existing features:**
-- JavaScript functionality for the navigation burger menu.
-- JavaScript functionality for bouncing calls to actions.
-- JQuery functionality for changing the greeting in the hero image based on the user's timezone. 
-- JavaScript functionality for menu tabs.
-- JavaScript functionality for the milestone timeline.
+Based on the described features, here is how you could describe the implementation of similar functionalities in a React context:
+
+**React Implementation of Existing Features:**
+
+1. **Navigation Burger Menu:**
+   - Use React state to manage the visibility of the navigation menu. Upon clicking the burger icon, toggle the state to show or hide the menu.
+   - Implement CSS transitions for smooth opening and closing animations.
+   - Example: Use `useState` to manage a boolean state for the menu's visibility and a button to toggle this state. Apply conditional rendering or dynamic class names to show/hide the menu.
+
+2. **Bouncing Calls to Action:**
+   - Utilize CSS animations or a React animation library (e.g., `react-spring`) to create bouncing effects for call-to-action buttons.
+   - Manage animation triggers using React state or CSS pseudo-classes (e.g., `:hover`).
+
+3. **Dynamic Greeting Based on User's Timezone:**
+   - Use JavaScript's `Date` object to determine the user's local time and set a greeting message accordingly.
+   - Implement this logic within a React component, possibly using `useEffect` to set the greeting when the component mounts.
+
+4. **Menu Tabs:**
+   - Implement tabbed navigation using React state to manage the active tab.
+   - Render different content based on the active tab state. This can be achieved with conditional rendering or a tab component library like `react-tabs`.
+
+For each feature, React's declarative nature allows you to manage user interactions and UI updates in a more integrated way, reducing the need for direct DOM manipulations and simplifying state management compared to traditional JavaScript or jQuery implementations.
 
 ## Technologies
 
-The Oishi website utilizes the following technologies:
+The ecommerce website is developed with the following stack:
 
-- Figma for design.
-- FontAwesome for icons.
-- CSS for styling.
-- HTML for content.
-- JavaScript
-- JQuery
-- Visual Studio Code for development.
-- GitHub for version control.
-- ChatGPT for content creation.
+- UI design created in Figma.
+- Icons sourced from FontAwesome.
+- Styling enhanced with Bootstrap.
+- Web structure and content managed with React.
+- Development facilitated by Visual Studio Code.
+- Version control handled through GitHub.
+- Content assistance provided by ChatGPT.
 
 ## User Stories
 
-1. **As a food enthusiast,** I want to explore a Japanese Izakaya menu online so I can decide what to try before visiting.
+**User Story: Enhancing the Ecommerce Experience with React and Bootstrap**
 
-2. **As a potential customer,** I need an easy way to book a table at Oishi Izakaya, ensuring I have a reserved spot.
+**Title:** Navigating and Shopping on a React-Based Ecommerce Platform
 
-3. **As a tourist in Tokyo,** I am looking for a local dining experience and want to find a Japanese tavern with an authentic atmosphere.
+**As a** bike enthusiast,  
+**I want** to explore, search, and purchase bikes easily on an ecommerce platform,  
+**So that** I can find the perfect bike that meets my needs and preferences.
 
-4. **As a regular customer,** I want to keep up with any new additions to the menu or special offers at Oishi Izakaya.
+**Acceptance Criteria:**
 
-5. **As a social media user,** I want to follow Oishi Izakaya on platforms like Facebook, Twitter, and Instagram to stay connected.
+1. **Seamless Navigation:**
+   - **Given** I am on the homepage,
+   - **When** I look for navigational cues,
+   - **Then** I should see a responsive NavBar that includes links to Home, About, FAQs, Contact, and a Cart indicator showing the number of items in my cart.
 
-## User Flow
+2. **Dynamic Product Search:**
+   - **Given** I am interested in finding a specific type of bike,
+   - **When** I use the ProductSearch component at the top of the homepage,
+   - **Then** I should see real-time filtering of products based on my search term.
 
-1. **Landing on the Website**
-   - User is greeted with a vibrant homepage showcasing Oishi Izakaya’s ambiance.
-   - Sees the navigation menu with options like Home, Menu, Book a table, About Oishi, and Contact us.
+3. **Detailed Product Information:**
+   - **Given** I find a bike I'm interested in,
+   - **When** I click on a product to view more details,
+   - **Then** I should be taken to a ProductDetail page that provides comprehensive information, including images, seller details, location, condition, and the option to add the product to my cart.
 
-2. **Exploring the Menu**
-   - Clicks on 'Menu' to explore the variety of dishes and drinks offered.
-   - Browses through different categories and items.
+4. **Interactive Shopping Experience:**
+   - **Given** I want to purchase a bike,
+   - **When** I add a bike to my cart,
+   - **Then** I should see a confirmation message, and the cart indicator should update to reflect the new item count.
 
-3. **Making a Reservation**
-   - Navigates to 'Book a table' to make a reservation.
-   - Fills in details like date, time, and number of guests.
-   - Confirms the booking and receives a confirmation.
+5. **Easy Access to FAQs:**
+   - **Given** I have questions about shipping or returns,
+   - **When** I visit the FAQs page,
+   - **Then** I should find answers to common questions, with the option to search for specific queries.
 
-4. **Learning About the Izakaya**
-   - Visits 'About Oishi' to learn about the Izakaya’s history, values, and unique selling points.
+6. **Selling My Bike:**
+   - **Given** I have a bike to sell,
+   - **When** I navigate to the SellBikeForm,
+   - **Then** I should be able to list my bike by providing details about the bike, my contact information, and submitting the form.
 
-5. **Contacting the Izakaya**
-   - Chooses 'Contact us' for inquiries or feedback.
-   - Uses the provided form or contact details to reach out.
+7. **User Consent for Cookies:**
+   - **Given** I am concerned about my online privacy,
+   - **When** I first visit the site,
+   - **Then** I should be prompted with a CookieConsent modal where I can agree to the use of cookies.
 
-6. **Following on Social Media**
-   - Scrolls to the footer to find social media icons.
-   - Follows Oishi Izakaya on selected platforms for updates and community engagement.
+8. **Contacting the Platform:**
+   - **Given** I need to get in touch with the site administrators,
+   - **When** I visit the Contact page,
+   - **Then** I should find a form that allows me to send a message directly to them.
 
-### Task Flow for Booking a Table
+9. **Scrolling to Products:**
+   - **Given** I am intrigued by the Hero banner's call to action,
+   - **When** I click the "Start Your Cycling Adventure" button,
+   - **Then** the page should smoothly scroll down to the ProductList section.
 
-1. **Accessing the Reservation Section**
-   - User clicks on 'Book a table' from the navigation menu.
+**Notes:**
+- The application should be responsive, ensuring a seamless experience across various devices and screen sizes.
+- The user interface should be intuitive, allowing users to easily understand how to navigate and use the site's features.
 
-2. **Filling in Reservation Details**
-   - Enters the required information: date, time, and number of guests.
-   - Optionally provides additional preferences or requests.
+**Implementation:**
+- The application leverages React for efficient UI rendering and state management, and Bootstrap for responsive design and styling.
+- Components like NavBar, ProductList, ProductDetail, and others are modular and reusable, enhancing maintainability and scalability of the platform.
 
-3. **Submitting the Reservation**
-   - Reviews the entered details.
-   - Clicks on a button to confirm the booking.
+## User Flow:
 
-4. **Receiving Confirmation**
-   - Receives a notification or email confirming the reservation with the details.
+1. **Landing on the Homepage:**
+   - The user is greeted by a Hero section that showcases the site's purpose and a call to action to start their cycling adventure.
+   - The navigation bar at the top provides links to different sections of the site including Products, About, FAQs, and Contact.
 
-### Additional Notes
+2. **Exploring Products:**
+   - The user scrolls down or clicks on a navigation link to view the Product List.
+   - They can use the Product Search component to filter products based on their search term.
 
-- The website is designed to provide an immersive experience that reflects the ambiance and offerings of Oishi Izakaya.
-- Emphasis is placed on easy navigation and accessibility to cater to a diverse user base.
-- Social media integration and online reservation functionality enhance user engagement and convenience.
+3. **Viewing Product Details:**
+   - Upon finding a product of interest, the user clicks on the product, leading them to the Product Detail page where they can see more information, including price, seller info, and a detailed description.
+   - If interested, the user can add the product to their cart.
+
+4. **Navigating Other Pages:**
+   - The user explores additional information through the About and FAQ sections accessible from the navigation bar.
+   - If the user wants to sell their bike, they navigate to the SellBikeForm page from the navigation bar.
+
+5. **Checking Out:**
+   - After adding items to their cart, the user visits the Cart page by clicking on the cart icon in the NavBar, where they can review their selections, remove items, or proceed to checkout.
+
+6. **Contacting and Consent:**
+   - The user may decide to contact the site owners for further inquiries or assistance via the Contact form.
+   - Throughout their visit, the user receives a Cookie Consent prompt, ensuring compliance with privacy regulations.
+
+### Task Flow for Adding a Product to the Cart:
+
+1. **Search for a Product:**
+   - The user enters a search term in the Product Search component located just below the Hero section on the homepage.
+
+2. **Select a Product:**
+   - From the filtered search results in the Product List, the user selects a product that interests them by clicking on it, navigating them to the Product Detail page.
+
+3. **Add Product to Cart:**
+   - On the Product Detail page, the user reviews the product information and decides to add the product to their cart by clicking the "Add to Cart" button.
+
+4. **View Cart Message:**
+   - Upon adding the item to the cart, a message appears at the top of the page confirming the addition: “Added '[Product Name]' to the cart!”
+
+5. **Review Cart:**
+   - The user clicks on the cart icon in the NavBar to view the Cart page, reviewing the items added, with options to remove items or proceed further.
+
+This user flow and task flow together outline how a user interacts with the key features of the ecommerce website, from initial exploration to performing specific actions like adding a product to the cart.
 
 ## Wireframes
 
 ```css
 :root {
-  --main-font: 'Karla', sans-serif;
-  --secondary-font: 'Bitter', serif;
-  --primary-color: #76141C;
-  --secondary-color: #764214;
-  --background-color: #E0E0E0;
-  --text-color: #282c45;
-  --link-color: #350004;
-  --link-hover-color: #F8CACD;
-  --hover-color: #141E76;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  --primary-color: #005354;
+  --hover-color: #1C756D;
+  --secondary-color: #E9FFB4;
+  --tertiary-color: #C18F72;
+  --accent-color: #ECDFD5;
+  --delete-color: #ff6b6b;
+  --text-color: #333;
+  --text-dark: #fefefe;
+  --background-light: #F9F4F2;
+  --font-size-xl: 2.5em; /* Slightly reduced for better proportion */
+  --font-size-l: 1.5em; /* Large but not overly dominant */
+  --font-size-m: 1em; /* Standard size for body text */
+  --font-size-price: 1em; /* Prominent for prices */
+  --font-size-s: 0.875em; /* Smaller for less important text */
+  --hover-secondary: #A46946;
 }
 ```
 
@@ -175,18 +342,17 @@ The Oishi website utilizes the following technologies:
 
 ## Learning Outcomes
 
-From a student's perspective, the Oishi Izakaya project offered a valuable opportunity for learning and development, particularly in the following areas:
+For a student focusing on front-end development, learning outcomes from this project include:
 
-- Web Design and Development: Gaining practical experience in designing and developing a responsive and user-friendly website.
-- Creative Problem Solving: Overcoming design and development challenges to create a website that effectively conveys the essence of a Japanese izakaya.
-- Technical Skills Enhancement: Improving skills in HTML, CSS, JavaScript, and jQuery.
-- User Experience Design: Understanding the importance of creating a seamless and engaging user experience.
-- Project Management: Learning to manage a web development project from concept to deployment.
-- Cultural Exploration: Gaining insights into Japanese culture and cuisine, and translating that understanding into the design and content of the website. 
-
-## Code snippets
- ![Book mobile](doc/code/01.jpg)
- ![Book mobile](doc/code/02.jpg)
+1. Mastering React fundamentals, including component creation, state management, and hooks usage.
+2. Implementing routing with React Router for seamless navigation within a single-page application (SPA).
+3. Integrating Bootstrap for responsive design and UI components, enhancing the visual and functional aspects of web development.
+4. Managing form inputs and submissions, including validation and feedback, to ensure user data is correctly captured and processed.
+5. Employing useRef for interacting with the DOM, enabling features like smooth scrolling to specific components.
+6. Utilizing external libraries like FontAwesome for icons, enriching the user interface without compromising performance.
+7. Handling dynamic data flow between components, demonstrating how to manage global state in a complex application.
+8. Practicing version control with GitHub, reinforcing best practices for collaboration and code management.
+9. Developing a comprehensive understanding of creating and managing an ecommerce website's front-end, from product listing to checkout. 
  
 ## Testing
 
@@ -195,38 +361,6 @@ The website has been thoroughly tested on various devices and browsers:
 - Mobile (iPhone 14)
 - Smaller laptop MacBook Air
 - iMac
-
-**Responsiveness:**
-
-All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in WCAG 2.1 
-Reflow criteria for responsive design on Chrome, Edge, Firefox, Safari and Opera browsers.
-
-Steps to test:
-
-- Open the browser and navigate to Oishi Izakaya
-- Open the developer tools (right-click and inspect)
-- Set to responsive and decrease width to 320px
-- Set the zoom to 50%
-- Click and drag the responsive window to the maximum width
-
-Expected:
-
-The website is responsive on all screen sizes and no images are pixelated or stretched. 
-No horizontal scroll is present. No elements overlap.
-
-Actual:
-
-The website behaved as expected.
-
-The website was also opened on the following devices and no responsive issues were seen:
-
-- iPhone 14
-- iPhone SE
-- Samsung Galaxy Android S20 Android 11
-- MacBook Air
-- iMac 27''
-- iMac 24''
-
 
 **Accessibility:**
 
@@ -256,193 +390,27 @@ and interact with the content, promoting a more inclusive and user-friendly expe
 - Firefox
 - Google Chrome
 
-**Functional Testing**
-
-Navigation Links:
-
-Testing was performed to ensure all navigation links on the respective pages, navigated 
-to the correct pages as per design. This was done by clicking on the navigation links on each page.
-
-| Navigation Link | Page to Load          |
-| --------------- | ----------------------|
-| Home            | index.html            |
-| Menu            | menu.html             |
-| Book a table    | reservation.html      |
-| About           | about.html            |
-| Contact         | contact.html          |
-| 404             | 404.html              |
-
-Links on all pages navigated to the correct pages as expected.
-
-| Test Case                 | Description                                                       | Expected Result                                                                  |
-|---------------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| 1. Homepage               | Verify that the homepage loads successfully.                      | Page loads without errors.                                                       |
-| 2. Navigation             | Test the navigation menu to ensure all links are functional.      | All links navigate to the correct pages.                                         |
-| 3. Menu Items             | Check if menu items can be viewed and selected.                   | Menu items are visible and selectable.                                           |
-| 4. Images                 | Confirm that images load properly and are not broken.             | All images are displayed without errors.                                         |
-| 5. Contact Form           | Test the contact form for usability and submission.               | Form fields can be filled and submitted without errors.                          |
-| 6. Mobile Responsiveness  | Test the webpage on different screen sizes.                       | Content adjusts and remains readable on various screen sizes.                    |
-| 7. Browser Compatibility  | Verify that the webpage works on multiple browsers.               | Webpage functions correctly on popular browsers (Chrome, Firefox, Safari, etc.). |
-| 8. Social Links           | Check if social media links are functional.                       | Social media links open in new tabs and navigate to the correct profiles.        |
-| 9. Loading Speed          | Measure the loading speed of the webpage.                         | Page loads within an acceptable time frame.                                      |
-| 10. Error Handling        | Test for proper error messages when encountering issues.          | Appropriate error messages are displayed when errors occur.                      |
-
-**Usability testing**
-
-Conducting web usability testing for Oishi Izakaya was essential 
-to ensure that our webpage provides a seamless and user-friendly experience across 
-both mobile and desktop platforms. By gathering insights from real users, we aimed 
-to identify any potential issues, enhance the overall usability, and validate the functionalities 
-of our website. Maria, Carlos, and Sofia, all in the same age group, were among 
-the individuals who participated in the testing process. Their valuable feedback and interactions 
-with the webpage allowed us to make necessary improvements, ensuring that Oishi Izakaya's 
-online presence meets the needs and expectations of our diverse user base. The three participants 
-got the mission without any problem quickly, underscoring the effectiveness of our 
-user-centred design approach. We are committed to delivering an exceptional online experience for our visitors, 
-and web usability testing played a pivotal role in achieving this goal.
-
-_Scenario One - Mobile Responsiveness and Booking_
-
-Steps to test:
-
-1. Open the Izakaya webpage on a mobile device.
-2. Verify that the webpage is responsive and all content is displayed correctly.
-3. Click on the "Book a Table" link in the navigation.
-4. On the "Book a Table" page, fill in the required information, including selecting a date and time for the reservation.
-5. Submit the booking request using the input forms.
-
-Outcome: The webpage worked properly on a mobile device, with a responsive design. The user effectively 
-achieved the mission of booking a table by successfully providing the required information, 
-including the date and time, through the input forms.
-
-_Scenario Two - Desktop Menu Navigation_
-
-Steps to test:
-
-1. Access the Izakaya webpage on a desktop computer.
-2. From the landing page, locate the navigation menu.
-3. Click on the "Menu" option.
-4. On the "Menu" page, find and click on the "Dessert" tab.
-5. Verify that the "Dessert" menu is displayed, and you can view the dessert options.
-
-Outcome: The webpage worked properly on a desktop computer. The user effectively achieved 
-the mission by easily navigating to the "Dessert" section of the menu, where dessert options were displayed as expected.
-
-_Scenario Three - Contact and Directions:_
-
-Steps to test:
-
-1. Visit the Izakaya webpage.
-2. Navigate to the "Contact" page.
-3. Click on the map or a relevant link to access the embedded Google Map.
-4. Use the map to get directions to the Izakaya's location using Google Maps.
-
-Outcome: The webpage worked properly, allowing the user to access and interact with the embedded Google Map. 
-The user effectively achieved the mission of obtaining directions to the Izakaya's location through Google Maps.
-
-_Scenario Four - About Me Page and Milestone Tabs_
-
-Steps to test:
-
-1. Enter the Izakaya webpage.
-2. Navigate to the "About Me" page.
-3. Scroll down the page to find the section with opening and closing milestones.
-4. Click on the tabs or buttons associated with the milestones to view their content and details.
-5. Ensure that the milestones' information is presented accurately.
-
-Outcome: The webpage worked properly, providing the user with a smooth scrolling experience. 
-The user effectively achieved the mission of exploring the "About Me" page and accessing the opening 
-and closing milestones by clicking on the relevant tabs. The milestones' information was accurately presented.
-
-**Lighthouse Report:**
-
-- Landing Page
-  ![Landing Page Lighthouse](doc/lighthouse/index.jpg)
-
-
-- Menu page
-  ![Thank you Lighthouse](doc/lighthouse/menu.jpg)
-
-- Book a table page
-  ![Thank you Lighthouse](doc/lighthouse/book.jpg)
-
-- About page
-  ![Thank you Lighthouse](doc/lighthouse/about.jpg)
-
-- Contact page
-  ![Thank you Lighthouse](doc/lighthouse/contact.jpg)
-
-- 404 page
-  ![Thank you Lighthouse](doc/lighthouse/404.jpg)    
-
-
-**W3C Validator results:**
-
-
-- Landing Page
-  ![Landing Page Lighthouse](doc/checker/index.jpg)
-
-
-- Menu page
-  ![Thank you Lighthouse](doc/checker/menu.jpg)
-
-- Book a table page
-  ![Thank you Lighthouse](doc/checker/book.jpg)
-
-- About page
-  ![Thank you Lighthouse](doc/checker/about.jpg)
-
-- Contact page
-  ![Thank you Lighthouse](doc/checker/contact.jpg)
-
-- 404 page
-  ![Thank you Lighthouse](doc/checker/404.jpg)
-
-**Javascript Validation results:**
-
-- Button
-  ![JS Button](doc/js/button.jpg)
-
-- Fast click
-  ![JS fast click](doc/js/fastclick.jpg)
-
- - Greetings
-  ![JS greetings](doc/js/greetings.jpg)
-
-  - Menu tabs
-  ![JS tab](doc/js/menu-tabs.jpg)
-
-  - Milestones
-  ![JS milestones](doc/js/milestone.jpg)
-
-  - Navigation
-  ![JS navigation](doc/js/navigation.jpg)
-
-  - Responsive Navigation
-  ![JS resp navigation](doc/js/responsive-navigaiton.jpg)
-
-  - Scrolling
-  ![JS scrolling](doc/js/scrolling.jpg)  
-
 ## Deployment:
 
 **Version Control:**
 
-The site was created using the Visual Studio code editor and pushed to Github to the remote repository ‘Oishizakaya’.
-The following git commands were used throughout development to push code to the remote repo:
-git add <file> - This command was used to add the file(s) to the staging area before they are committed.
-git commit -m “commit message” - This command was used to commit changes to the local repository queue ready for the final step.
-git push - This command was used to push all committed code to the remote repository on GitHub.
+The website was developed using Visual Studio Code and version-controlled with Git. It was pushed to the remote repository 'Oishizakaya' on GitHub. The following Git commands were used during development:
 
-**Deployment to Github Pages:**
+- `git add <file>`: Used to stage file(s) for committing.
+- `git commit -m "commit message"`: Used to commit changes to the local repository.
+- `git push`: Used to push all committed code to the remote GitHub repository.
 
-The site was deployed to GitHub pages. The steps to deploy are as follows:
-In the GitHub repository, navigate to the Settings tab
-From the menu on left select 'Pages'
-From the source section drop-down menu, select the Branch: main
-Click 'Save'
-A live link will be displayed in a green banner when published successfully.
-The live link can be found [here](https://igordinuzzi.github.io/oishizakaya/)
+**Deployment to GitHub Pages:**
+
+The website was deployed to GitHub Pages with the following steps:
+
+1. In the GitHub repository, navigate to the 'Settings' tab.
+2. From the menu on the left, select 'Pages.'
+3. In the source section drop-down menu, select the 'Branch: main.'
+4. Click 'Save.'
+5. A live link will be displayed in a green banner when the deployment is successful.
+
+You can access the live website [here](https://igordinuzzi.github.io/ecommerce-site-react/).
 
 
 ## Credits
