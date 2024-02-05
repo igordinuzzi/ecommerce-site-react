@@ -22,12 +22,12 @@ function Footer() {
           <Col sm={12} md={6} lg={3}>
             <div className="footer-navigation">
             <ul>
-                <li onClick={() => navigate('/')}>Home</li>
-                <li onClick={() => navigate('/products')}>Products</li>
-                <li onClick={() => navigate('/SellBikeForm')}>Sell Your Bike</li>
-                <li onClick={() => navigate('/about')}>About</li>
-                <li onClick={() => navigate('/faqs')}>FAQs</li>
-                <li onClick={() => navigate('/contact')}>Contact</li>
+                <li><a href="https://igordinuzzi.github.io/ecommerce-site-react/#/">Home</a></li>
+                <li><a href="https://igordinuzzi.github.io/ecommerce-site-react/#/products">Products</a></li>
+                <li><a href="https://igordinuzzi.github.io/ecommerce-site-react/#/SellBikeForm">Sell Your Bike</a></li>
+                <li><a href="https://igordinuzzi.github.io/ecommerce-site-react/#/about">About</a></li>
+                <li><a href="https://igordinuzzi.github.io/ecommerce-site-react/#/faqs">FAQs</a></li>
+                <li><a href="https://igordinuzzi.github.io/ecommerce-site-react/#/contact">Contact</a></li>
             </ul>
             </div>
           </Col>
