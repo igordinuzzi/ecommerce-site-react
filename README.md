@@ -4,12 +4,13 @@
 1. [Features](#features)
 2. [Existing Features and Features to Implement](#existing-features-and-features-to-implement)
 3. [Technologies](#technologies)
-4. [User Stories](#user-stories)
-5. [User Flow](#user-flow)
-6. [Wireframes](#wireframes)
-7. [Testing](#testing)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
+4. [Components](#components)
+5. [User Stories](#user-stories)
+6. [User Flow](#user-flow)
+7. [Wireframes](#wireframes)
+8. [Testing](#testing)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
 
 ![Mockup](doc/mockup.png)
 
@@ -17,7 +18,7 @@ This React-based platform stands out as a unique second-hand Dutch bike ecommerc
 
 Live webpage [here](https://igordinuzzi.github.io/ecommerce-site-react/)
 
-## Features
+# Features
 
 - Navigation:
 This React component features adaptive navigation with comprehensive links for smooth browsing across devices, enhancing user engagement and satisfaction. Using React Router and Bootstrap, it offers meticulously structured navigation for easy location of information, products, or services, improving usability and user retention. The NavBar component, with dynamic cart animations and easy cart access, serves as a key user touchpoint, combining functionality and aesthetics. It uses FontAwesome icons and a collapsible design to keep navigation user-friendly and fluid on all platforms.
@@ -198,6 +199,63 @@ The ecommerce website is developed with the following stack:
 - Development facilitated by Visual Studio Code.
 - Version control handled through GitHub.
 - Content assistance provided by ChatGPT.
+
+## Components
+
+| Directory               |                    
+|-------------------------|
+| ecommerce-site-react/   |                        
+| public/                 |                        
+| index.html              |                       
+| src/                    |                        
+| components/             |                        
+| About/                  |                        
+| About.js                |                        
+| About.css               | 
+| Cart/                   |                        
+| Cart.js                 |                        
+| Cart.css                | 
+| Contact/                |                        
+| Contact.js              |                        
+| Contact.css             | 
+| CookieConsent/          |                        
+| CookieConsent.js        |                        
+| CookieConsent.css       | 
+| FAQ/                    |                        
+| Faq.js                  |                        
+| Faq.css                 | 
+| Footer/                 |                        
+| Footer.js               |                        
+| Footer.css              | 
+| GenericBanner/          |                        
+| GenericBanner.js        |                        
+| GenericBanner.css       | 
+| Hero/                   |                        
+| Hero.js                 |                        
+| Hero.css                | 
+| Navbar/                 |                        
+| Navbar.js               |                        
+| Navbar.css              | 
+| Navbar/                 |                        
+| Navbar.js               |                        
+| Navbar.css              | 
+| ProductDetail/          |                        
+| ProductDetail.js        |                        
+| ProductDetail.css       | 
+| ProductList/            |                        
+| ProductList.js          |                        
+| ProductList.css         | 
+| common/                 |                        
+| Product.js              |
+| ProductSearch/          |                        
+| ProductSearch.js        |                        
+| ProductSearch.css       | 
+| SellBikeForm/           |                        
+| SellBikeForm.js         |                        
+| SellBikeForm.css        | 
+
+
+
 
 ## User Stories
 
