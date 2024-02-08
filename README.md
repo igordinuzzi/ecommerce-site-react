@@ -391,13 +391,27 @@ This user flow and task flow together outline how a user interacts with the key 
 }
 ```
 
- ![Book mobile](doc/wire/01.jpg)
- ![Book mobile](doc/wire/02.jpg)
- ![Book mobile](doc/wire/03.jpg)
- ![Book mobile](doc/wire/04.jpg)
- ![Book mobile](doc/wire/05.jpg)
- ![Book mobile](doc/wire/palette.jpg)
-
+Desktop homepage:
+ ![Wireframes](doc/wireframes/01-01-home.jpg)
+Mobile homepage:
+ ![Wireframes](doc/wireframes/01-02-home.jpg)
+Desktop sell your bike form page: 
+ ![Wireframes](doc/wireframes/02-01-sell.jpg)
+Mobile sell your bike form page:  
+ ![Wireframes](doc/wireframes/02-02-sell.jpg)
+Desktop FAQ page:  
+ ![Wireframes](doc/wireframes/03-01-faq.jpg)
+Mobile FAQ page:  
+ ![Wireframes](doc/wireframes/03-02-faq.jpg)
+Desktop contact page:   
+ ![Wireframes](doc/wireframes/04-01-contact.jpg)
+Mobile contact page:   
+ ![Wireframes](doc/wireframes/04-02-contact.jpg)
+Desktop cart page:   
+ ![Wireframes](doc/wireframes/05-01-cart.jpg)
+Mobile cart page:    
+ ![Wireframes](doc/wireframes/05-02-cart.jpg)
+ 
 ## Learning Outcomes
 
 For a student focusing on front-end development, learning outcomes from this project include:
