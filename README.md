@@ -12,7 +12,7 @@
 9. [Deployment](#deployment)
 10. [Credits](#credits)
 
-![Mockup](doc/mockup.png)
+![Mockup](doc/mockup/mockup.png)
 
 This React-based platform stands out as a unique second-hand Dutch bike ecommerce site, combining easy product discovery, detailed insights, and smooth shopping in an appealing and functional online environment. It guides users with a dynamic navigation bar and a welcoming Hero section to a select range of Dutch bikes and accessories. The site makes finding and buying pre-owned bicycles straightforward with an intuitive Product Search and detailed Product Pages, supported by a comprehensive FAQ, an engaging About page, and a direct Contact form. It invites users to engage by selling their bikes, and features a Generic Banner for news and a Footer for easy navigation, emphasizing transparency and trust with a Cookie Consent feature. Beyond being a shopping site, it's a community hub for Dutch cycling enthusiasts, promoting a more connected cycling community with every interaction.
 
