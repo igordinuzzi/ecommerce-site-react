@@ -20,28 +20,63 @@ Live webpage [here](https://igordinuzzi.github.io/ecommerce-site-react/)
 
 # Features
 
-- Navigation:
+- ## Navigation:
 This React component features adaptive navigation with comprehensive links for smooth browsing across devices, enhancing user engagement and satisfaction. Using React Router and Bootstrap, it offers meticulously structured navigation for easy location of information, products, or services, improving usability and user retention. The NavBar component, with dynamic cart animations and easy cart access, serves as a key user touchpoint, combining functionality and aesthetics. It uses FontAwesome icons and a collapsible design to keep navigation user-friendly and fluid on all platforms.
- ![Navigation](doc/features/nav-desktop.jpg)
- ![Navigation mobile](doc/features/nav-mobile.jpg)
+ ![Navigation](doc/features/01_01_Navigation.jpg)
+ ![Navigation mobile](doc/features/01_02_Navigation.jpg)
   
-- Footer: 
+- ## Footer: 
 The site's footer enhances user experience by offering social media links to Facebook, Twitter, and Instagram for community engagement, a clear navigation menu for easy access to essential pages like Home and Contact, and an email link for direct communication. It also promotes the site's mobile app with links to Google Play and the Apple App Store for on-the-go access. Styled with custom CSS and FontAwesome icons, this React component strengthens the brand's presence and commitment to accessibility and convenience.
-  ![Footer](doc/features/footer-desktop.jpg)
-  ![Footer mobile](doc/features/footer-mobile.jpg)
+  ![Footer](doc/features/02_01_footer.jpg)
+  ![Footer mobile](doc/features/02_02_footer.jpg)
 
-- Favicon for easy recognition.
+- ## Favicon for easy recognition.
 The favicon is important in a webpage as it provides a recognizable visual identity in browser tabs, 
 enhancing brand visibility and user recognition, and it helps users quickly locate and return to the site.
-  ![Favicon](doc/features/favicon.png)
+  ![Favicon](doc/features/03_favicon.jpg)
   
-- Landing page 
+- ## Landing page 
 This React application offers streamlined navigation with a fluid layout, guiding users from a welcoming Hero component to various sections like Products and About via a NavBar. It features a ProductList for browsing second-hand Dutch bikes and accessories, enhanced by a ProductSearch for refined exploration. Detailed product information is available through the ProductDetail component, including add-to-cart options. The interface promotes interactivity with notifications for cart updates and a Cart page summarizing purchases. Users can list their bikes for sale with the SellBikeForm, contributing to the cycling community. Informative sections provide insights into the platform's mission, with a GenericBanner for special announcements. The design is responsive across devices, with a Footer that offers social media links, app store downloads, and navigation, emphasizing the brand and community ethos. CookieConsent integration ensures user privacy, creating a comprehensive experience for Dutch bike enthusiasts.
-    ![Welcome Page](doc/features/index-desktop.jpg)
-    ![Welcome Page](doc/features/index-mobile.jpg)
+    ![Welcome Page](doc/features/04_landing_page.jpg)
+```javascript
+function App() {
+  const [cartItems, setCartItems] = useState([]);
+  const [message, setMessage] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const productListRef = useRef(null);
 
-- About page
+  useEffect(() => {
+    if (message !== '') {
+      const timer = setTimeout(() => setMessage(''), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
+  const addToCart = (product) => {
+    const productWithImage = { ...product, image: 'product-image-url.jpg' };
+    setCartItems([...cartItems, productWithImage]);
+    setMessage(`Added "${product.name}" to the cart!`); // Set message when item is added
+  };
+
+  const onRemoveItem = (index) => {
+    const productRemoved = cartItems[index].name;
+    const newCartItems = cartItems.filter((item, itemIndex) => itemIndex !== index);
+    setCartItems(newCartItems);
+    setMessage(`Removed "${productRemoved}" from the cart.`); // Set message when item is removed
+  };
+
+  const scrollToProductList = () => {
+    productListRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+}
+```
+
+- ## About page
+![About Page](doc/features/05_about.jpg)
 The `About` component in this React application presents Fitsen, a platform for Dutch bicycles, highlighting its mission, values, and offerings. Key features include:
 
 Introduction: Introduces Fitsen and its mission for a sustainable, quality-driven cycling community.
@@ -54,8 +89,41 @@ Contact Info: Encourages user engagement with contact details.
 
 Styled with custom CSS and using React Bootstrap for responsive layout, plus FontAwesome icons for visual enhancement, this component effectively conveys Fitsen's ethos and invites user interaction.
 
-- Cart
-
+```javascript
+{/* Customer Testimonials Section */}
+      <Carousel className="testimonials-carousel">
+        <Carousel.Item>
+          <Row className="justify-content-center">
+            <Col md={6} className="text-center">
+              <img
+                className="testimonial-image d-block"
+                src={`${process.env.PUBLIC_URL}/images/about/testimonial-1.png`}
+                alt="First testimonial"
+              />
+              <blockquote className="testimonial-text">"I love my new Dutch bike from Fitsen! Great quality and service."</blockquote>
+              <p className="testimonial-name">Araceli</p>
+            </Col>
+          </Row>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Row className="justify-content-center">
+            <Col md={6} className="text-center">
+              <img
+                className="testimonial-image d-block"
+                src={`${process.env.PUBLIC_URL}/images/about/testimonial-2.png`}
+                alt="Second testimonial"
+              />
+              <blockquote className="testimonial-text">"Fitsen made it easy to find the perfect bike for my city commutes."</blockquote>
+              <p className="testimonial-name">Marie</p>
+            </Col>
+          </Row>
+        </Carousel.Item>
+        {/* Add more Carousel.Items as needed */}
+      </Carousel>
+```
+- ## Cart
+![Cart Page](doc/features/06_01_cart.jpg)
+![Cart Page](doc/features/06_02_cart.jpg)
 The `Cart` component in this React application manages the checkout process for a shopping cart, including form validation and stepwise navigation. It uses `useState` for managing form data, errors, and the current step in the checkout process, and `useEffect` to calculate the total price based on cart items, taxes, and shipping costs. The component features:
 
 Cart Item Listing: Dynamically lists items in the cart with prices.
@@ -67,20 +135,177 @@ Dynamic Form Rendering: Renders form fields based on the current step, including
 
 The component is styled with `Cart.css` and uses Bootstrap for layout and components like `Container`, `Form`, `Button`, `Alert`, and `ListGroup`. It also includes a `PaymentOptionsImages` component to display payment options during the final step of the checkout process.
 
-- Contact
+```javascript
+function Cart({ cartItems }) {
+  const [currentStep, setCurrentStep] = useState(1);
+  const [formData, setFormData] = useState({
+    name: '',
+    lastname: ' ', // Initial value with a space
+    address: '',
+    homenumber: '',
+    postcode: '',
+    phone: '+31 ',
+    email: '',
+  });
+  const [formErrors, setFormErrors] = useState({});
+  const [totalPrice, setTotalPrice] = useState(0);
 
+
+  useEffect(() => {
+    const cartTotal = cartItems.reduce((total, item) => total + item.price, 0);
+    const taxes = cartTotal * 0.21;
+    const shipping = 23;
+    setTotalPrice(cartTotal + taxes + shipping);
+  }, [cartItems]);
+
+  const renderCartItems = () => {
+    return cartItems.map((item, index) => (
+      <ListGroup.Item key={item.id || index}>
+        <div className="cart-item">
+          <div className="cart-item-name">{item.name}</div>
+          <div className="cart-item-price">${item.price.toFixed(2)}</div>
+        </div>
+      </ListGroup.Item>
+    ));
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    validateField(name, value);
+  };
+
+  const validateField = (name, value) => {
+    let isValid = true;
+    switch (name) {
+      case 'name':
+        isValid = /^[a-zA-Z ]+$/.test(value);
+        break;
+      case 'address':
+        isValid = /^[a-zA-Z ]+$/.test(value);
+        break;
+      case 'postcode':
+        isValid = /^\d+$/.test(value);
+        break;
+      case 'phone':
+        isValid = /^\+31 \d+$/.test(value);
+        break;
+      case 'lastname':
+        isValid = /^[a-zA-Z ]+$/.test(value);
+        break;
+      case 'homenumber':
+          isValid = /^\d+$/.test(value);
+          break;
+      case 'email':
+      // Use a regular expression to validate the email format
+      isValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value);
+      break;      
+      default:
+        isValid = value.trim() !== '';
+    }
+    setFormErrors({ ...formErrors, [name]: isValid });
+  };
+
+  const isFormValid = () => {
+    return Object.values(formErrors).every((v) => v === true) && Object.keys(formErrors).length === Object.keys(formData).length;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Use isFormValid here to ensure entire form is valid before submission
+    if(isFormValid()) {
+      // Implement submission logic here
+      alert('Form submitted');
+    } else {
+      // Optionally handle the case where the form is somehow not valid at submission
+      alert('Please ensure all form fields are correctly filled and valid.');
+    }
+  };
+  
+  const nextStep = () => {
+    if (currentStep < 3) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const prevStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const steps = [
+    { title: 'Step 1', fields: ['name', 'lastname', 'address', 'homenumber', 'postcode'], contentType: 'formFields' },
+    { title: 'Step 2', fields: ['phone', 'email'], contentType: 'formFields' },
+    { title: 'Step 3', contentType: 'images' },
+  ];
+  
+  const handleBlur = (fieldName) => {
+    // Implement your field blur logic here
+  };
+
+  const isFieldTouched = (fieldName) => {
+    // Implement your field touched logic here
+    return true; // Placeholder, modify as needed
+  };
+
+  const isStepValid = () => {
+    // Check if the current step has fields defined
+    if (steps[currentStep - 1].fields) {
+      const currentStepFields = steps[currentStep - 1].fields;
+      const fieldsValid = currentStepFields.every((field) => formErrors[field] === true);
+      const fieldsFilled = currentStepFields.every((field) => formData[field].trim() !== '');
+      return fieldsValid && fieldsFilled;
+    } else {
+      // If no fields are defined for the step, consider the validation requirement met
+      // You might want to adjust this logic based on your app's needs
+      return true;
+    }
+  };
+```
+
+- ## Contact
+![Contact Page](doc/features/07_contact.jpg)
 The `Contact` component in this React application provides a user-friendly form for visitors to submit their contact information and messages. It utilizes `useState` to manage form data, sending status, and error messages. The form includes fields for the user's name, email, and a message, with basic validation to ensure no fields are left empty. Upon submission, it displays either a sending status or an error message based on input validation. The form is styled with a custom CSS file (`Contact.css`) and uses React Bootstrap components like `Container`, `Form`, `Button`, and `Alert` for layout and styling. The submission logic, intended for integration with Netlify's form handling, can be easily adapted for other backends or form processing solutions.
 
-- Cookies
-
+- ## Cookies
+![Cookies Page](doc/features/08_cookies.jpg)
 The `CookieConsent` component in this React application displays a modal window to inform users about the use of cookies on the website. It utilizes `useState` to control the visibility of the modal and `useEffect` to determine whether the user has previously given consent for cookies, leveraging `localStorage` to store this consent status. If the user has not given consent (`cookieConsent` not set to 'true' in `localStorage`), the modal is shown. The modal includes a message about cookie usage and an "I Agree" button. Clicking this button hides the modal and records the user's consent by setting `cookieConsent` to 'true' in `localStorage`. The component is styled with a custom CSS file (`CookieConsent.css`) and uses React Bootstrap components `Modal` and `Button` for the modal dialog and consent button, respectively.
+```javascript
+const CookieConsent = () => {
+  const [show, setShow] = useState(false);
 
-- FAQs
+  useEffect(() => {
+    const consentGiven = localStorage.getItem('cookieConsent');
+    if (consentGiven !== 'true') {
+      setShow(true);
+    }
+  }, []);
 
+  const handleClose = () => {
+    setShow(false);
+    localStorage.setItem('cookieConsent', 'true');
+  };
+```
+
+- ## FAQs
+![Cookies Page](doc/features/09_faq.jpg)
 The `FAQ` component provides an interactive Frequently Asked Questions section using React Bootstrap, featuring a dynamic list of questions and answers from an array (`faqData`). It includes a search function that filters FAQs based on user input, displayed in an accordion format for easy navigation. The component is responsive, ensuring compatibility across devices, and styled with a custom CSS file (`FAQ.css`). This setup enhances user experience by offering quick access to common queries and supporting efficient information retrieval within the application.
+```javascript
+function FAQ() {
+  const [searchTerm, setSearchTerm] = useState('');
 
-- Generic Banner
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
+  const filteredFaqs = faqData.filter(faq =>
+    faq.question.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+```
+
+- ## Generic Banner
+![Banner](doc/features/10_banner.jpg)
 The `GenericBanner` component is a versatile and visually engaging part of a React application, designed to promote key actions or features within the site. It is structured using React Bootstrap components for a responsive layout and styled with a custom CSS file (`GenericBanner.css`). The component features two main sections within a fluid container for full-width display:
 
 - **Left Banner**: This section encourages users to start selling their bikes by listing them on the platform. It includes compelling text ("Start Selling Your Bike Now"), a brief prompt ("Get ready to list your bike and find buyers!"), and a call-to-action button ("Get Started") that links to the `SellBikeForm` page using a `Link` component from `react-router-dom`. An image related to selling bikes enhances the visual appeal.
@@ -89,8 +314,8 @@ The `GenericBanner` component is a versatile and visually engaging part of a Rea
 
 Each section utilizes a `Row` and `Col` structure to ensure content is displayed optimally across different screen sizes. The use of external links for app downloads and internal routing for the platform's form page demonstrates a blend of navigation strategies to engage users effectively. This component is a strategic tool for driving user action, whether it's listing bikes for sale or downloading the app, and enhances the user experience with its informative and interactive design.
 
-- Hero
-
+- ## Hero
+![Hero](doc/features/11_hero.jpg)
 The `Hero` component is a visually striking section at the top of a web page, designed to capture the visitor's attention immediately upon arrival. It's built using React and styled with a dedicated CSS file (`Hero.css`), incorporating React Bootstrap components for a responsive layout. The component features a two-column layout within a `Container`: 
 
 - The left column (`Col`) contains the textual content, including a main title (`h1`) that introduces "Fietsen" as a destination for bike enthusiasts, and a subtitle (`h2`) that highlights the platform as a hub for buying, selling, and exploring bikes. A `Button` is included to engage users, encouraging them to start their cycling adventure by scrolling to the product list section of the site.
@@ -99,7 +324,7 @@ The `Hero` component is a visually striking section at the top of a web page, de
 
 This setup ensures the Hero section effectively communicates the site's core message and entices users to engage further by exploring the products offered, serving as both an introduction and a call to action.
 
-- Product Detail page
+- ## Product Detail page
 
 The `ProductDetail` component is designed to display detailed information about a specific product selected by the user. Built with React and styled with a custom CSS file (`ProductDetail.css`), it uses `useParams` from `react-router-dom` to retrieve the product's ID from the URL and finds the corresponding product from a predefined list (`products`).
 
@@ -113,8 +338,8 @@ Additional Content**: Further down, the component outlines key features of the p
 
 The structure is responsive, ensuring that the content adjusts nicely to different screen sizes, and the layout is divided into sections for easy navigation and readability. This component effectively combines product details, sharing capabilities, and user reviews, creating a comprehensive and engaging product page experience.
 
-- Product list
-
+- ## Product list
+![Products](doc/features/13_products.jpg)
 The `ProductList` component is designed to dynamically display a catalog of products, particularly focusing on bikes with detailed attributes such as name, description, seller, location, condition, price, and an image. This React component is part of a larger application and offers several key functionalities:
 
 Dynamic Product Loading: Initially, it shows a set number of products (16) and includes functionality to load more products or revert to the initial view. This is managed through state, using `useState` to track the number of visible products and functions to adjust this number.
@@ -125,8 +350,8 @@ Interactivity: Includes buttons to "Load More" products or "Hide" them, enhancin
 
 This component is styled with a dedicated CSS file (`Product.css`) and leverages React's component-based architecture to modularly display products, making it a versatile and user-friendly part of an e-commerce or marketplace platform.
 
-- Product
-
+- ## Product
+![Product](doc/features/12_product.jpg)
 The `Product` component displays information about a single product, intended for use within an e-commerce platform or product listing page. It utilizes React and FontAwesome icons to create a visually appealing presentation of each product's details. Key features of the component include:
 
 Product Image: Displays the product's image, with the `src` path dynamically generated using the `product.image` property.
@@ -137,8 +362,8 @@ See More Link: Provides a `Link` to a detailed page for the product, using `reac
 
 This component is designed to be reusable, making it easy to list multiple products by mapping over an array of product objects and rendering a `Product` component for each one. It effectively encapsulates product information in a clear, concise format, encouraging user interaction through its "Add to Cart" and "See More" functionalities.
 
-- Search
-
+- ## Search
+![Search](doc/features/14_search.jpg)
 The `ProductSearch` component provides a user-friendly search interface, enabling users to filter through products based on their search terms. It employs React state management to handle the input value and dynamically update the search results through the `onSearch` callback function. Key features include:
 
 Search Input: A text input field where users can type their search query, styled with CSS for visual appeal.
@@ -148,9 +373,24 @@ Search Icon: A magnifying glass icon (`faSearch`) visually indicates the search 
 Feedback on Results: Displays a message below the input field, indicating the number of products found based on the search term. This message dynamically adjusts to reflect singular or plural products based on the `productsCount`.
 
 This component enhances user experience by allowing for easy navigation and filtering of products, making it an essential feature for e-commerce platforms or any application with a searchable product catalog.
+```javascript
+function ProductSearch({ onSearch, productsCount }) {
+  const [searchTerm, setSearchTerm] = useState('');
 
-- Sell bike form
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    onSearch(e.target.value);
+  };
 
+  const handleClearSearch = () => {
+    setSearchTerm('');
+    onSearch('');
+  };
+
+```
+
+- ## Sell bike form
+![Sell](doc/features/15_search.jpg)
 The `SellBikeForm` component is a multi-step form designed for users to list their bikes for sale. It's built with React and styled using React Bootstrap and FontAwesome icons for a visually appealing interface. Key features include:
 
 State Management: Utilizes `useState` for tracking form data, validation errors, touched fields, progress through the form, and completion status.
@@ -490,7 +730,8 @@ You can access the live website [here](https://igordinuzzi.github.io/ecommerce-s
 - Design and Development: Igor Dinuzzi
 - Content Creation: ChatGPT
 - Iconography: FontAwesome
-- Images: Sourced from Unsplash
+- Icons: The Noun Project
+- Images: Sourced from Unsplash and Freepik
 
 
 
