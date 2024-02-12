@@ -674,6 +674,44 @@ The website has been thoroughly tested on various devices and browsers:
 - Smaller laptop MacBook Air
 - iMac
 
+User 1: Browsing and Adding Products to Cart
+
+    Navigates to the homepage: Success
+    Scrolls to the product list using the "Hero" component's call-to-action: Success
+    Searches for a specific product using "ProductSearch": Success
+    Adds a product to the cart from "ProductList": Success
+    Views the cart to see the added item: Success
+
+Score: 5/5 (All tasks were completed successfully)
+User 2: Removing Items and Navigating to FAQ
+
+    Navigates to the homepage and adds a few products to the cart: Success
+    Decides to remove an item from the cart using the NavBar's cart item list: Success
+    Visits the FAQs page to read more about product return policies: Success
+
+Score: 3/3 (All tasks were completed successfully)
+User 3: Selling a Bike
+
+    Navigates directly to the SellBikeForm via URL or menu navigation: Success
+    Fills out the form to sell a bike but decides not to submit and navigates away to the homepage: Success
+
+Score: 2/2 (All tasks were completed successfully)
+User 4: Contacting Support
+
+    Navigates to the Contact page from the NavBar: Success
+    Fills out the contact form with a query about a product: Success
+    Submits the form and waits for a response (simulated by visiting the FAQ page for answers): Success
+
+Score: 3/3 (All tasks were completed successfully)
+User 5: Exploring About Page and Cookie Consent
+
+    Visits the About page to learn more about the company: Success
+    Accepts the cookie consent popup upon landing on the site: Success
+    Navigates back to the homepage and uses the ProductSearch to look up products but doesn't add anything to the cart: Success
+
+Score: 3/3 (All tasks were completed successfully)
+
+
 **Accessibility:**
 
 [Wave Accessibility](https://wave.webaim.org/) tool was used throughout the development 
