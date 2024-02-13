@@ -630,6 +630,7 @@ This user flow and task flow together outline how a user interacts with the key 
   --hover-secondary: #A46946;
 }
 ```
+ ![Design system](doc/designsystem/designsystem.jpg)
 
 Desktop homepage:
  ![Wireframes](doc/wireframes/01-01-home.jpg)
