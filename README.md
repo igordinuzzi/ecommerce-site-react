@@ -18,6 +18,8 @@ This React-based platform stands out as a unique second-hand Dutch bike ecommerc
 
 Live webpage [here](https://igordinuzzi.github.io/ecommerce-site-react/)
 
+Watch video [here](https://youtu.be/QtNMasooneU)
+
 # Features
 
 - ## Navigation:
